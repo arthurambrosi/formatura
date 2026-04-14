@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Confirmação Baile de Gala</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#1a1c19",
+                    "on-surface": "#cbe9e0",
+                    "tertiary": "#c6c7c2",
+                    "on-tertiary": "#2f312e",
+                    "primary-fixed": "#ffdea5",
+                    "tertiary-container": "#242623",
+                    "on-secondary-container": "#d0b179",
+                    "inverse-on-surface": "#1b3530",
+                    "surface-container-low": "#04201b",
+                    "primary": "#e9c176",
+                    "secondary-container": "#594316",
+                    "secondary-fixed-dim": "#e2c289",
+                    "inverse-surface": "#cbe9e0",
+                    "outline-variant": "#414845",
+                    "on-tertiary-fixed-variant": "#454744",
+                    "on-primary-fixed-variant": "#5d4201",
+                    "primary-container": "#332300",
+                    "secondary-fixed": "#ffdea5",
+                    "on-error": "#690005",
+                    "surface-container-highest": "#203934",
+                    "error-container": "#93000a",
+                    "inverse-primary": "#775a19",
+                    "surface-bright": "#243e38",
+                    "on-tertiary-container": "#8c8d89",
+                    "surface-tint": "#e9c176",
+                    "outline": "#8b928e",
+                    "on-secondary-fixed": "#261900",
+                    "surface-container-high": "#142e29",
+                    "surface-container": "#09241f",
+                    "background": "#001713",
+                    "on-surface-variant": "#c1c8c3",
+                    "on-primary": "#412d00",
+                    "surface-dim": "#001713",
+                    "on-secondary-fixed-variant": "#594316",
+                    "surface-variant": "#203934",
+                    "secondary": "#e2c289",
+                    "error": "#ffb4ab",
+                    "on-background": "#cbe9e0",
+                    "on-secondary": "#402d02",
+                    "surface-container-lowest": "#00110e",
+                    "on-error-container": "#ffdad6",
+                    "primary-fixed-dim": "#e9c176",
+                    "tertiary-fixed": "#e3e3de",
+                    "surface": "#001713",
+                    "tertiary-fixed-dim": "#c6c7c2",
+                    "on-primary-container": "#aa8843",
+                    "on-primary-fixed": "#261900"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(4, 32, 27, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 25px rgba(233, 193, 118, 0.3);
+        }
+        input:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        .noise-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30 min-h-screen relative overflow-x-hidden">
+<div class="noise-overlay fixed inset-0 z-[100]"></div>
+<header class="fixed top-0 w-full z-50 bg-emerald-950/60 backdrop-blur-xl dark:bg-emerald-950/60 flex justify-between items-center px-6 h-16 max-w-none">
+<div class="flex items-center gap-4">
+<a class="material-symbols-outlined text-amber-200 cursor-pointer hover:scale-105 transition-all duration-300" href="index.html">arrow_back</a>
+<h1 class="text-lg font-serif italic tracking-widest text-amber-200">O BAILE</h1>
+</div>
+<button aria-label="Foto de Arthur" class="text-amber-200 cursor-pointer hover:scale-105 transition-all duration-300" type="button">
+<span class="block w-9 h-9 overflow-hidden rounded-full border border-amber-200/40 shadow-[0_0_0_1px_rgba(233,193,118,0.08)]">
+<img alt="Foto de Arthur" class="w-full h-full object-cover" src="arthur-avatar.jpg" style="object-position: center 18%;"/>
+</span>
+</button>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-lg mx-auto relative z-10">
+<section class="mb-10">
+<div class="mb-6 overflow-hidden rounded-xl h-48 relative shadow-2xl">
+<img alt="Elegant Gala Hall" class="w-full h-full object-cover grayscale-[0.2] brightness-75" data-alt="A luxurious ballroom with golden chandeliers, dark emerald drapes, and beautifully set tables with gold cutlery under soft warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClEZs9TEpLT9AE_4eBFq9mxJlaCY1vO_QUwLldbL_PJFeagGcDTL9cm-17mjTpJ1UStAP1Hcq4Oya0YmIk5T8A-hmkhS8fT5ANsn7tP37MZKhbqOoZrL5m1LP7DLCHQGwknc5PUnMjkZ-fe7vHRNzMfVZK4QKIQTGk8lqtEQtXa-b4wVcaf97fSRvRd6d4--IYSeGzfzWzx7U-ThKlwFR432MtNSP1VMWOFdT3-yXUAEWl_Xeofi965iAybUFz05IH6FjWbo-8MbM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+</div>
+<div class="space-y-3">
+<h2 class="font-headline text-3xl leading-tight text-on-surface">Baile de Gala</h2>
+<div class="flex flex-col gap-1 mt-4 pt-4 border-t border-outline-variant/30">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span class="font-label text-[11px] uppercase tracking-widest">04 de Julho de 2026, 22:00</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="font-label text-[11px] uppercase tracking-widest">Centro de Convenções de Salvador</span>
+</div>
+</div>
+<p class="text-on-surface-variant font-light text-sm tracking-wide mt-4">Celebre conosco o ápice desta conquista. Sua presença é fundamental para o brilho desta noite inesquecível.</p>
+</div>
+</section>
+<form action="https://script.google.com/macros/s/AKfycbwc_USEznHx3dE8FVP5AZzSgEdS9HqEcSzIpoMZ_jCosvQSuyGphY1vm02423ATaAHrgg/exec" class="space-y-12" method="POST">
+<input name="evento" type="hidden" value="baile"/>
+<input name="origem" type="hidden" value="Baile"/>
+<input name="pagina" type="hidden" value="baile.html"/>
+<input name="canal" type="hidden" value="site"/>
+<div class="group relative">
+<label class="block font-label text-primary text-[11px] tracking-[0.15em] mb-1 opacity-80 uppercase" for="nome_completo">Nome Completo</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 text-on-surface font-headline text-xl focus:border-primary transition-colors duration-300 placeholder:text-outline-variant/50" id="nome_completo" name="nome_completo" placeholder="Como consta no convite individual" required="" type="text"/>
+</div>
+<div class="space-y-6">
+<p class="font-label text-primary text-[11px] tracking-[0.15em] uppercase opacity-80">Confirmação de Presença</p>
+<div class="grid grid-cols-1 gap-4">
+<label class="relative flex items-center p-5 rounded-xl bg-surface-container-low border border-outline-variant/10 cursor-pointer transition-all duration-300 hover:bg-surface-container hover:scale-[1.01] group">
+<input class="peer sr-only" name="status" required="" type="radio" value="confirm"/>
+<div class="w-5 h-5 rounded-full border border-primary/40 flex items-center justify-center mr-4 group-hover:border-primary transition-colors">
+<div class="w-2.5 h-2.5 rounded-full bg-primary scale-0 peer-checked:scale-100 transition-transform"></div>
+</div>
+<span class="text-on-surface font-body text-sm tracking-wide">Sim, irei ao Baile de Gala</span>
+<div class="absolute inset-0 rounded-xl border-2 border-primary/0 peer-checked:border-primary/20 transition-all pointer-events-none"></div>
+</label>
+<label class="relative flex items-center p-5 rounded-xl bg-surface-container-low border border-outline-variant/10 cursor-pointer transition-all duration-300 hover:bg-surface-container hover:scale-[1.01] group">
+<input class="peer sr-only" name="status" type="radio" value="decline"/>
+<div class="w-5 h-5 rounded-full border border-primary/40 flex items-center justify-center mr-4 group-hover:border-primary transition-colors">
+<div class="w-2.5 h-2.5 rounded-full bg-primary scale-0 peer-checked:scale-100 transition-transform"></div>
+</div>
+<span class="text-on-surface font-body text-sm tracking-wide">Infelizmente, não poderei comparecer</span>
+<div class="absolute inset-0 rounded-xl border-2 border-primary/0 peer-checked:border-primary/20 transition-all pointer-events-none"></div>
+</label>
+<label class="relative flex items-center p-5 rounded-xl bg-surface-container-low border border-outline-variant/10 cursor-pointer transition-all duration-300 hover:bg-surface-container hover:scale-[1.01] group">
+<input class="peer sr-only" name="status" type="radio" value="pending"/>
+<div class="w-5 h-5 rounded-full border border-primary/40 flex items-center justify-center mr-4 group-hover:border-primary transition-colors">
+<div class="w-2.5 h-2.5 rounded-full bg-primary scale-0 peer-checked:scale-100 transition-transform"></div>
+</div>
+<span class="text-on-surface font-body text-sm tracking-wide">Confirmarei em breve</span>
+<div class="absolute inset-0 rounded-xl border-2 border-primary/0 peer-checked:border-primary/20 transition-all pointer-events-none"></div>
+</label>
+</div>
+</div>
+<div class="pt-8">
+<button class="w-full bg-gradient-to-tr from-primary to-primary-fixed-dim text-on-primary font-label font-bold py-5 rounded-xl tracking-[0.2em] uppercase text-xs btn-glow transition-all duration-300 active:scale-95 shadow-[0_4px_20px_rgba(233,193,118,0.15)] flex justify-center items-center gap-2 group" type="submit">
+                    Confirmar Presença
+                    <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<p class="text-center text-outline text-[10px] uppercase tracking-widest mt-6 opacity-60">UM E-MAIL DE CONFIRMAÇÃO SERÁ ENVIADO COM SEU CONVITE DIGITAL.</p>
+</div>
+</form>
+</main>
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-4 pb-safe bg-emerald-950/80 backdrop-blur-lg dark:bg-emerald-950/80 shadow-[0_-10px_40px_rgba(0,0,0,0.3)] rounded-t-3xl md:hidden">
+<a class="flex flex-col items-center justify-center text-emerald-100/40 hover:text-amber-100 transition-colors duration-300" href="index.html">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-sans uppercase text-[10px] tracking-[0.15em] font-bold mt-1">INÍCIO</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-100/40 hover:text-amber-100 transition-colors duration-300" href="index.html#baile">
+<span class="material-symbols-outlined" data-icon="event">event</span>
+<span class="font-sans uppercase text-[10px] tracking-[0.15em] font-bold mt-1">DETALHES</span>
+</a>
+<a class="flex flex-col items-center justify-center text-amber-200 scale-110" href="baile.html">
+<span class="material-symbols-outlined" data-icon="mail" style="font-variation-settings: 'FILL' 1;">mail</span>
+<span class="font-sans uppercase text-[10px] tracking-[0.15em] font-bold mt-1">CONFIRMAÇÃO</span>
+</a>
+</nav>
+<div class="fixed bottom-[-100px] right-[-100px] w-[300px] h-[300px] bg-primary/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+<div class="fixed top-[-50px] left-[-50px] w-[200px] h-[200px] bg-emerald-900/20 rounded-full blur-[80px] -z-10 pointer-events-none"></div>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const optionLabels = Array.from(document.querySelectorAll('label')).filter(function (label) {
+            return label.querySelector('input[type="radio"]');
+          });
+
+          function updateSelectionStyles() {
+            optionLabels.forEach(function (label) {
+              const radio = label.querySelector('input[type="radio"]');
+              const indicator = label.querySelector('div.w-5.h-5');
+              const dot = indicator ? indicator.querySelector('div') : null;
+              const outline = label.querySelector('.absolute.inset-0.rounded-xl.border-2');
+
+              if (!radio) {
+                return;
+              }
+
+              if (radio.checked) {
+                label.style.backgroundColor = 'rgba(32, 57, 52, 0.92)';
+                label.style.borderColor = 'rgba(233, 193, 118, 0.28)';
+                label.style.boxShadow = '0 0 0 1px rgba(233, 193, 118, 0.12)';
+                if (indicator) indicator.style.borderColor = '#e9c176';
+                if (dot) dot.style.transform = 'scale(1)';
+                if (outline) outline.style.borderColor = 'rgba(233, 193, 118, 0.22)';
+              } else {
+                label.style.backgroundColor = '';
+                label.style.borderColor = '';
+                label.style.boxShadow = '';
+                if (indicator) indicator.style.borderColor = '';
+                if (dot) dot.style.transform = '';
+                if (outline) outline.style.borderColor = '';
+              }
+            });
+          }
+
+          optionLabels.forEach(function (label) {
+            const radio = label.querySelector('input[type="radio"]');
+            if (radio) {
+              radio.addEventListener('change', updateSelectionStyles);
+            }
+          });
+
+          updateSelectionStyles();
+        });
+    </script>
+<script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const form = document.querySelector('form[action*="script.google.com/macros"]');
+          const submitFrame = document.getElementById('rsvp-submit-frame');
+          const submitButton = form ? form.querySelector('button[type="submit"]') : null;
+          let submitting = false;
+          let fallbackTimer = null;
+
+          if (!form || !submitFrame) {
+            return;
+          }
+
+          form.target = 'rsvp_submit_frame';
+
+          submitFrame.addEventListener('load', function () {
+            if (!submitting) {
+              return;
+            }
+
+            if (fallbackTimer) {
+              window.clearTimeout(fallbackTimer);
+            }
+
+            window.location.href = 'confirmacao.html';
+          });
+
+          form.addEventListener('submit', function () {
+            submitting = true;
+
+            if (submitButton) {
+              submitButton.disabled = true;
+              submitButton.style.opacity = '0.85';
+              submitButton.style.cursor = 'wait';
+            }
+
+            fallbackTimer = window.setTimeout(function () {
+              if (!submitting) {
+                return;
+              }
+
+              submitting = false;
+
+              if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.style.opacity = '';
+                submitButton.style.cursor = '';
+              }
+
+              window.alert('Nao foi possivel concluir o envio agora. Tente novamente.');
+            }, 15000);
+          });
+        });
+    </script>
+<iframe aria-hidden="true" id="rsvp-submit-frame" name="rsvp_submit_frame" style="display:none;" title="Envio de confirmacao"></iframe>
+</body>
+</html>

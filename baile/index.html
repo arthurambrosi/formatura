@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Baile | Formatura de Arthur</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#1a1c19",
+                    "on-surface": "#cbe9e0",
+                    "tertiary": "#c6c7c2",
+                    "on-tertiary": "#2f312e",
+                    "primary-fixed": "#ffdea5",
+                    "tertiary-container": "#242623",
+                    "on-secondary-container": "#d0b179",
+                    "inverse-on-surface": "#1b3530",
+                    "surface-container-low": "#04201b",
+                    "primary": "#e9c176",
+                    "secondary-container": "#594316",
+                    "secondary-fixed-dim": "#e2c289",
+                    "inverse-surface": "#cbe9e0",
+                    "outline-variant": "#414845",
+                    "on-tertiary-fixed-variant": "#454744",
+                    "on-primary-fixed-variant": "#5d4201",
+                    "primary-container": "#332300",
+                    "secondary-fixed": "#ffdea5",
+                    "on-error": "#690005",
+                    "surface-container-highest": "#203934",
+                    "error-container": "#93000a",
+                    "inverse-primary": "#775a19",
+                    "surface-bright": "#243e38",
+                    "on-tertiary-container": "#8c8d89",
+                    "surface-tint": "#e9c176",
+                    "outline": "#8b928e",
+                    "on-secondary-fixed": "#261900",
+                    "surface-container-high": "#142e29",
+                    "surface-container": "#09241f",
+                    "background": "#001713",
+                    "on-surface-variant": "#c1c8c3",
+                    "on-primary": "#412d00",
+                    "surface-dim": "#001713",
+                    "on-secondary-fixed-variant": "#594316",
+                    "surface-variant": "#203934",
+                    "secondary": "#e2c289",
+                    "error": "#ffb4ab",
+                    "on-background": "#cbe9e0",
+                    "on-secondary": "#402d02",
+                    "surface-container-lowest": "#00110e",
+                    "on-error-container": "#ffdad6",
+                    "primary-fixed-dim": "#e9c176",
+                    "tertiary-fixed": "#e3e3de",
+                    "surface": "#001713",
+                    "tertiary-fixed-dim": "#c6c7c2",
+                    "on-primary-container": "#aa8843",
+                    "on-primary-fixed": "#261900"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: linear-gradient(135deg, rgba(32, 57, 52, 0.6) 0%, rgba(9, 36, 31, 0.4) 100%);
+            backdrop-filter: blur(20px);
+        }
+        .gold-gradient {
+            background: linear-gradient(90deg, #e9c176 0%, #ffdea5 50%, #e9c176 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .metallic-btn {
+            background: linear-gradient(135deg, #e9c176 0%, #aa8843 100%);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30 min-h-screen no-scrollbar" id="inicio">
+<header class="bg-emerald-950/60 backdrop-blur-xl fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 max-w-none">
+<button class="text-amber-200 hover:scale-105 hover:text-amber-300 transition-all duration-300 active:scale-95" type="button">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="text-lg font-headline italic tracking-widest text-amber-200">FORMATURA DE ARTHUR</h1>
+<button aria-label="Foto de Arthur" class="text-amber-200 hover:scale-105 hover:text-amber-300 transition-all duration-300 active:scale-95" type="button">
+<span class="block w-9 h-9 overflow-hidden rounded-full border border-amber-200/40 shadow-[0_0_0_1px_rgba(233,193,118,0.08)]">
+<img alt="Foto de Arthur" class="w-full h-full object-cover" src="arthur-avatar.jpg" style="object-position: center 18%;"/>
+</span>
+</button>
+</header>
+<section class="relative h-[751px] w-full flex flex-col items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0 parallax-bg" data-alt="dramatic silhouettes of a historic coastal lighthouse and fortress at night" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxbmrAFFF54Gn1c0ipS_RuS4TQOszEknWo29fpCfAQHxNm1uqA428rxC_9Z17ayFwl-Jk4_nspS-XQ9ZN2OTFmsPrBuCxwvF_JZepOg6RFCuvt5JjrGWUhQ_v6ZlMMcNnMbWOs2YrV8u9O3sze3amX5pVDW6e3QpXuhCD3o6D9CU27OMkEKyMv7yedHqULoHOTBuSfjUa2L_Qf_YN7PUK_UWW1jChN3JHf16LQPNjZOmD80OrY8nL_C1efhcciYua3099ChUCt5EA'); opacity: 0.3;"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-background/0 via-background/40 to-background z-10"></div>
+<div class="relative z-20 text-center px-6">
+<p class="font-label text-primary tracking-[0.3em] text-xs mb-4 uppercase">Medicina 2026</p>
+<h2 class="font-headline text-5xl md:text-7xl lg:text-8xl italic mb-6 gold-gradient leading-tight">
+                A Jornada <br/>do Legado
+            </h2>
+<div class="w-12 h-[1px] bg-primary/40 mx-auto mb-8"></div>
+<p class="max-w-md mx-auto text-on-surface-variant font-light leading-relaxed">
+                Um convite solene para celebrar a conclusão de uma trajetória de dedicação, ciência e humanidade na Formatura de Arthur.
+            </p>
+</div>
+</section>
+<main class="relative z-30 -mt-24 px-6 pb-32 space-y-24">
+<section class="max-w-4xl mx-auto" id="baile">
+<div class="flex items-baseline gap-4 mb-8 justify-end">
+<h3 class="font-headline text-3xl md:text-4xl">Baile de Gala</h3>
+<span class="font-headline text-4xl text-primary opacity-30 italic">01.</span>
+</div>
+<div class="glass-card rounded-xl overflow-hidden relative border border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-5">
+<div class="md:col-span-3 h-[400px] relative">
+<img class="w-full h-full object-cover" data-alt="luxury ballroom interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIczktQ2Nch8XSeVykzO9auqjKjVRxa8zThxcjPW-5Z-CNafF44YRvgD9TjiMstfs10BX_ERAo-ZOqwavWulaWC1i3ZYi4vYTXjD9inecaibhDR72c1rloMre3mGPSYv4llseW3taAJY-Ca8A-QT13SrxbCHG7ARwQxrf4jczEoRffmCfxHrRGGHL3G7zov3OOSIE1MqVT9AouEgaYaSsr-l-UCpSKKeSSvDYY_UDRHci_Qq_5Od4-lAmyxf4AHeLG3H6U2Pj6WDE"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background/0 to-surface-container-high/80"></div>
+</div>
+<div class="md:col-span-2 p-8 md:p-10 flex flex-col justify-center space-y-6 bg-surface-container-high">
+<div class="space-y-6 border-l border-primary/20 pl-6">
+<div class="space-y-1">
+<p class="font-label text-[10px] tracking-widest text-primary-fixed-dim opacity-70 uppercase">Data &amp; Horário</p>
+<p class="font-headline text-2xl gold-gradient">04 de Julho, 2026</p>
+<p class="font-body text-on-surface-variant">22:00 Horas</p>
+</div>
+<div class="space-y-1">
+<p class="font-label text-[10px] tracking-widest text-primary-fixed-dim opacity-70 uppercase">Localização</p>
+<p class="font-body text-xl">Centro de Convenções de Salvador</p>
+<p class="text-sm text-on-surface-variant italic">Boca do Rio, Salvador - BA</p>
+</div>
+<a class="group flex items-center gap-2 text-primary font-label text-xs tracking-widest uppercase mt-4" href="https://www.google.com/maps?sca_esv=81ef8ac98c35c5fb&amp;rlz=1C1FCXM_pt-PTBR1138BR1138&amp;output=search&amp;q=centro+de+conven%C3%A7%C3%B5es+salvador&amp;source=lnms&amp;fbs=ADc_l-acAb_3MMOAUx0zmbUpgBqRiigBgL2I_pgQa-94zvB052o5_U4JdDD4XfFI3UtcdNt6dgzX2lLlU-GMYwiDL1EJF0zClti9ea-ZCNmnRIFJZi5TpeC2Ut5dz_NMEhT5lGl65xKTltsaK5Pz_mblcideSLcM_ny7zGE4GpOx-3DFlkwGoqPbjeuow3w8aWcu3R4VHSf2GGmqHW-xT0h8r_7Lj1pa5g&amp;entry=mc&amp;ved=1t:200715&amp;ictx=111" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                                Ver no Mapa
+                                <span class="w-4 h-[1px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+</a>
+</div>
+<div class="pt-4">
+<a class="metallic-btn text-on-primary font-label font-bold py-4 px-8 rounded-xl shadow-lg hover:scale-105 active:scale-95 transition-all w-full flex items-center justify-center gap-2" href="baile.html">
+                                CONFIRMAR PRESENÇA
+                                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-4xl mx-auto">
+<h3 class="font-label text-xs tracking-[0.4em] text-center mb-12 uppercase text-primary/60">Informações Adicionais</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="restaurant">restaurant</span>
+<h5 class="font-headline text-xl">Buffet Merit</h5>
+</div>
+<p class="text-sm text-on-surface-variant font-light leading-relaxed">Referência em Salvador, com experiência em grandes formaturas, garantindo excelência e sofisticação.</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="skillet">skillet</span>
+<h5 class="font-headline text-xl">Serviço de Trattoria</h5>
+</div>
+<p class="text-sm text-on-surface-variant font-light leading-relaxed">Ilhas de massas, risotos e pizzas, preparados ao vivo e assinados por chefs renomados.</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="dinner_dining">dinner_dining</span>
+<h5 class="font-headline text-xl">Gastronomia Completa</h5>
+</div>
+<p class="text-sm text-on-surface-variant font-light leading-relaxed">Ilha de antepastos, ilha de jantar completa, ilha de sobremesas e salgados volantes.</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="icecream">icecream</span>
+<h5 class="font-headline text-xl">Doces &amp; Sobremesas</h5>
+</div>
+<p class="text-sm text-on-surface-variant font-light leading-relaxed">Ilha de sobremesas e doces artesanais preparados com ingredientes de alta qualidade.</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="local_bar">local_bar</span>
+<h5 class="font-headline text-xl">Bar Completo</h5>
+</div>
+<p class="text-sm text-on-surface-variant font-light leading-relaxed">Drinks (vodka Absolut e gin Beefeater), whisky 12 anos, cerveja Heineken, espumante, energético, água e refrigerante.</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-colors border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="photo_camera">photo_camera</span>
+<h5 class="font-headline text-xl">Cobertura Fotográfica</h5>
+</div>
+<p class="text-sm text-on-surface-variant font-light leading-relaxed">Registros eternizados com exclusividade pela Hermes Fotografia.</p>
+</div>
+</div>
+</section>
+<section class="max-w-4xl mx-auto">
+<h3 class="font-headline text-3xl text-center mb-12 gold-gradient">Programação Musical</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="p-6 bg-surface-container-low rounded-xl border border-primary/10 text-center hover:border-primary/30 transition-all">
+<p class="font-label text-xs tracking-widest text-primary/60 mb-2 uppercase">Atração Principal</p>
+<p class="font-headline text-xl">QUINTAL DA TIA CARLA</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl border border-primary/10 text-center hover:border-primary/30 transition-all">
+<p class="font-label text-xs tracking-widest text-primary/60 mb-2 uppercase">Sertanejo</p>
+<p class="font-headline text-xl">DAN VALENTE</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl border border-primary/10 text-center hover:border-primary/30 transition-all">
+<p class="font-label text-xs tracking-widest text-primary/60 mb-2 uppercase">Pagode</p>
+<p class="font-headline text-xl">SAIDDY BAMBA</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl border border-primary/10 text-center hover:border-primary/30 transition-all">
+<p class="font-label text-xs tracking-widest text-primary/60 mb-2 uppercase">Axé</p>
+<p class="font-headline text-xl">GUGA MEIRA</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl border border-primary/10 text-center hover:border-primary/30 transition-all md:col-span-2">
+<p class="font-label text-xs tracking-widest text-primary/60 mb-2 uppercase">Open Format</p>
+<p class="font-headline text-xl">DJ ABADDE</p>
+</div>
+</div>
+</section>
+</main>
+<nav class="bg-emerald-950/80 backdrop-blur-lg fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-4 pb-safe rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.3)]">
+<a class="flex flex-col items-center justify-center text-emerald-100/40 font-sans uppercase text-[10px] tracking-[0.15em] font-bold hover:text-amber-100 transition-colors duration-300" href="#inicio"><span class="material-symbols-outlined mb-1" data-icon="auto_awesome">auto_awesome</span>INÍCIO</a>
+<a class="flex flex-col items-center justify-center text-amber-200 scale-110 font-sans uppercase text-[10px] tracking-[0.15em] font-bold hover:text-amber-100 transition-colors duration-300" href="#baile"><span class="material-symbols-outlined mb-1" data-icon="event">event</span>DETALHES</a>
+<a class="flex flex-col items-center justify-center text-emerald-100/40 font-sans uppercase text-[10px] tracking-[0.15em] font-bold hover:text-amber-100 transition-colors duration-300" href="baile.html"><span class="material-symbols-outlined mb-1" data-icon="mail">mail</span>RSVP</a>
+</nav>
+<div class="fixed top-0 right-0 w-64 h-64 pointer-events-none z-0 opacity-10">
+<svg class="w-full h-full text-primary fill-none stroke-current stroke-[0.5]" viewBox="0 0 100 100">
+<path d="M0,0 Q50,0 100,50 Q100,100 100,100 M20,0 Q60,10 100,60 M40,0 Q70,20 100,70"></path>
+</svg>
+</div>
+</body>
+</html>
