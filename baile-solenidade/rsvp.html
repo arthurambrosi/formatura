@@ -256,9 +256,10 @@
         document.addEventListener('DOMContentLoaded', function () {
           const form = document.querySelector('form[action*="script.google.com/macros"]');
           const submitButton = form ? form.querySelector('button[type="submit"]') : null;
+          const originalButtonHtml = submitButton ? submitButton.innerHTML : '';
           let submitting = false;
 
-          if (!form || !submitButton) {
+          if (!form || !submitButton || !window.fetch || !window.FormData || !window.URLSearchParams) {
             return;
           }
 
@@ -268,11 +269,32 @@
               return;
             }
 
+            event.preventDefault();
             submitting = true;
             submitButton.disabled = true;
             submitButton.style.opacity = '0.85';
             submitButton.style.cursor = 'wait';
             submitButton.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span><span>ENVIANDO...</span>';
+
+            const body = new URLSearchParams(new FormData(form));
+
+            fetch(form.action, {
+              method: 'POST',
+              mode: 'no-cors',
+              body: body,
+              keepalive: true
+            })
+              .then(function () {
+                window.location.href = 'confirmacao.html';
+              })
+              .catch(function () {
+                submitting = false;
+                submitButton.disabled = false;
+                submitButton.style.opacity = '';
+                submitButton.style.cursor = '';
+                submitButton.innerHTML = originalButtonHtml;
+                window.alert('Nao foi possivel concluir o envio agora. Tente novamente.');
+              });
           });
         });
     </script>
