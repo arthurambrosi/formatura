@@ -246,56 +246,26 @@
 <script>
         document.addEventListener('DOMContentLoaded', function () {
           const form = document.querySelector('form[action*="script.google.com/macros"]');
-          const submitFrame = document.getElementById('rsvp-submit-frame');
           const submitButton = form ? form.querySelector('button[type="submit"]') : null;
           let submitting = false;
-          let fallbackTimer = null;
 
-          if (!form || !submitFrame) {
+          if (!form || !submitButton) {
             return;
           }
 
-          form.target = 'rsvp_submit_frame';
-
-          submitFrame.addEventListener('load', function () {
-            if (!submitting) {
+          form.addEventListener('submit', function (event) {
+            if (submitting) {
+              event.preventDefault();
               return;
             }
 
-            if (fallbackTimer) {
-              window.clearTimeout(fallbackTimer);
-            }
-
-            window.location.href = 'confirmacao.html';
-          });
-
-          form.addEventListener('submit', function () {
             submitting = true;
-
-            if (submitButton) {
-              submitButton.disabled = true;
-              submitButton.style.opacity = '0.85';
-              submitButton.style.cursor = 'wait';
-            }
-
-            fallbackTimer = window.setTimeout(function () {
-              if (!submitting) {
-                return;
-              }
-
-              submitting = false;
-
-              if (submitButton) {
-                submitButton.disabled = false;
-                submitButton.style.opacity = '';
-                submitButton.style.cursor = '';
-              }
-
-              window.alert('Nao foi possivel concluir o envio agora. Tente novamente.');
-            }, 15000);
+            submitButton.disabled = true;
+            submitButton.style.opacity = '0.85';
+            submitButton.style.cursor = 'wait';
+            submitButton.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span><span>ENVIANDO...</span>';
           });
         });
     </script>
-<iframe aria-hidden="true" id="rsvp-submit-frame" name="rsvp_submit_frame" style="display:none;" title="Envio de confirmacao"></iframe>
 </body>
 </html>
