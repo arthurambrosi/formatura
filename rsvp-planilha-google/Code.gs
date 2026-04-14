@@ -418,7 +418,7 @@ function criarOuAtualizarAbaConfig_(ss, infoOpcional) {
   sheet.getRange('A1').setValue('Configuracao');
   sheet.getRange('A1').setFontWeight('bold').setFontSize(14).setBackground('#04201b').setFontColor('#f5f1e8');
 
-  sheet.getRange('A3:B14').setValues([
+  const configRows = [
     ['Nome do evento', RSVP_CONFIG.defaultEventName],
     ['Spreadsheet ID', ss.getId()],
     ['Spreadsheet URL', ss.getUrl()],
@@ -431,13 +431,15 @@ function criarOuAtualizarAbaConfig_(ss, infoOpcional) {
     ['Aba Baile', RSVP_CONFIG.sheetBaile],
     ['Data limite RSVP', RSVP_CONFIG.defaultDeadline],
     ['Metodo recomendado', 'POST']
-  ]);
+  ];
+
+  sheet.getRange(3, 1, configRows.length, 2).setValues(configRows);
 
   sheet.getRange('D1:E1').merge();
   sheet.getRange('D1').setValue('Para os HTMLs');
   sheet.getRange('D1').setFontWeight('bold').setFontSize(14).setBackground('#04201b').setFontColor('#f5f1e8');
 
-  sheet.getRange('D3:E17').setValues([
+  const htmlRows = [
     ['Action do form', info.webAppUrl || 'COLE_AQUI_A_URL_EXEC'],
     ['Campo nome', 'nome_completo'],
     ['Campo evento simples', 'evento'],
@@ -453,10 +455,12 @@ function criarOuAtualizarAbaConfig_(ss, infoOpcional) {
     ['Deploy manual', 'Deploy > New deployment > Web app'],
     ['Quem acessa a Web App', 'Anyone'],
     ['Executar como', 'Voce']
-  ]);
+  ];
 
-  sheet.getRange('A3:A14').setFontWeight('bold');
-  sheet.getRange('D3:D18').setFontWeight('bold');
+  sheet.getRange(3, 4, htmlRows.length, 2).setValues(htmlRows);
+
+  sheet.getRange(3, 1, configRows.length, 1).setFontWeight('bold');
+  sheet.getRange(3, 4, htmlRows.length, 1).setFontWeight('bold');
   sheet.setColumnWidth(1, 190);
   sheet.setColumnWidth(2, 340);
   sheet.setColumnWidth(4, 220);
